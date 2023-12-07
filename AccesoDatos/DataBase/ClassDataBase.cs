@@ -109,7 +109,11 @@ namespace AccesoDatos.DataBase
                             break;
 
                         case "5":
-                            TipoDatoMySql = MySqlDbType.DateTime;
+                            TipoDatoMySql = MySqlDbType.Date;
+                            break;
+
+                        case "6":
+                            TipoDatoMySql = MySqlDbType.Time;
                             break;
 
                         default: break;

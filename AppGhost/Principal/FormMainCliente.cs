@@ -18,6 +18,7 @@ namespace AppGhost.Principal
         public FormMainCliente(ref ClassCliente objCliente)
         {
             InitializeComponent();
+            CargarListaFiestas();
 
             objClienteSesion = objCliente;
 
@@ -28,9 +29,9 @@ namespace AppGhost.Principal
         {
             ObjFiesta = new ClassFiesta();
             ObjFiestaLn.Index(ref ObjFiesta);
-            if (ObjCliente.MensajeError == null)
+            if (ObjFiesta.MensajeError == null)
             {
-                dgvFiestas.DataSource = ObjCliente.DtResultados;
+                dgvFiestas.DataSource = ObjFiesta.DtResultados;
             }
             else
             {
