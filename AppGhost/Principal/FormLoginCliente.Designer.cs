@@ -77,6 +77,7 @@
             // 
             this.TxtContrasena.Location = new System.Drawing.Point(295, 191);
             this.TxtContrasena.Name = "TxtContrasena";
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.Size = new System.Drawing.Size(195, 20);
             this.TxtContrasena.TabIndex = 1;
             // 
@@ -98,7 +99,7 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Iniciar Sesion";
             // 
-            // FormLogin
+            // FormLoginCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +111,7 @@
             this.Controls.Add(this.TxtContrasena);
             this.Controls.Add(this.TxtEmail);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Name = "FormLogin";
+            this.Name = "FormLoginCliente";
             this.Text = "FormLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

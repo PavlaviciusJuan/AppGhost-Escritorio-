@@ -15,7 +15,7 @@ namespace AppGhost.Principal
     public partial class FormLoginEmpleado : Form
     {
         private ClassEmpleado ObjEmpleado = null;
-        private readonly ClassEmpleadoLn ObjUsuarioLn = new ClassEmpleadoLn();
+        private readonly ClassEmpleadoLn ObjEmpleadoLn = new ClassEmpleadoLn();
 
         public FormLoginEmpleado()
         {
@@ -30,16 +30,20 @@ namespace AppGhost.Principal
                 Contrasena = TxtContrasena.Text
             };
 
-            ObjUsuarioLn.IniciarSesion(ref ObjEmpleado);
+            ObjEmpleadoLn.IniciarSesion(ref ObjEmpleado);
             if (ObjEmpleado.MensajeError == null)
             {
-                if (ObjEmpleado.ValorScalar == null)
+                if (ObjEmpleado.Nombre != null)
                 {
-                    MessageBox.Show("El usuario no existe");
+
+
+
+
+                    MessageBox.Show("El usuario " + ObjEmpleado.Nombre.ToString() + " fue ingresado");
                 }
                 else
                 {
-                    MessageBox.Show("El usuario" + ObjEmpleado.ValorScalar + " fue ingresado");
+                    MessageBox.Show("El usuario no existe");
                 }
 
             }

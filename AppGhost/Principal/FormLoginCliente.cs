@@ -31,15 +31,21 @@ namespace AppGhost.Principal
             };
 
             ObjClienteLn.IniciarSesion(ref ObjCliente);
+
             if (ObjCliente.MensajeError == null)
             {
-                if (ObjCliente.ValorScalar == null) 
+                if (ObjCliente.Nombre != null) 
                 {
-                    MessageBox.Show("El usuario no existe");
+                    MessageBox.Show("El usuario " + ObjCliente.Nombre.ToString() + " fue ingresado");
+                    FormMainCliente form = new FormMainCliente(ref ObjCliente);
+                    //form.MdiParent = this;
+                    this.Hide();
+                    form.FormClosed += (s, args) => this.Close();
+                    form.Show();
                 }
                 else
                 {
-                    MessageBox.Show("El usuario" + ObjCliente.ValorScalar + " fue ingresado");
+                    MessageBox.Show("El usuario no existe");
                 }
                 
             }

@@ -16,7 +16,7 @@ namespace LogicaNegocio.Usuarios
 
         #endregion
 
-        #region Metodo Index
+        #region Metodos
 
         public void Index(ref ClassCliente objUsuario)
         {
@@ -29,6 +29,22 @@ namespace LogicaNegocio.Usuarios
             };
 
             Ejecutar(ref objUsuario);
+        }
+
+        public void IniciarSesion(ref ClassCliente objCliente)
+        {
+            objDataBase = new ClassDataBase()
+            {
+                NombreTabla = "cliente",
+                NombreSP = "bdghostapp.SP_Cliente_InicioSesion",
+                Scalar = false
+
+            };
+
+            objDataBase.DtParametros.Rows.Add(@"p_email", "2", objCliente.Email);
+            objDataBase.DtParametros.Rows.Add(@"p_contraseña", "2", objCliente.Contrasena);
+
+            Ejecutar(ref objCliente);
         }
 
         #endregion

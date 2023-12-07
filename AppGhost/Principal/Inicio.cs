@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppGhost.Principal
@@ -17,14 +10,22 @@ namespace AppGhost.Principal
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnLoginCliente_Click(object sender, EventArgs e)
         {
-
+            FormLoginCliente form = new FormLoginCliente();
+            //form.MdiParent = this;
+            this.Hide();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLoginEmpleado_Click(object sender, EventArgs e)
         {
-
+            FormLoginEmpleado form = new FormLoginEmpleado();
+            //form.MdiParent = this;
+            this.Hide();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }

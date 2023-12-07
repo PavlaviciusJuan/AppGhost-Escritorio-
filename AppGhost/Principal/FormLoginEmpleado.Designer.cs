@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.btnRegistro = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtContrasena = new System.Windows.Forms.TextBox();
@@ -40,21 +39,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 89);
+            this.label3.Location = new System.Drawing.Point(324, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(120, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Iniciar Sesion";
-            // 
-            // btnRegistro
-            // 
-            this.btnRegistro.AutoSize = true;
-            this.btnRegistro.Location = new System.Drawing.Point(287, 356);
-            this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(187, 13);
-            this.btnRegistro.TabIndex = 10;
-            this.btnRegistro.TabStop = true;
-            this.btnRegistro.Text = "No tenes una cuenta? Registrate aqui";
+            this.label3.Text = "Iniciar Sesion Empleado";
             // 
             // label2
             // 
@@ -68,7 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(287, 158);
+            this.label1.Location = new System.Drawing.Point(287, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 9;
@@ -78,12 +67,13 @@
             // 
             this.TxtContrasena.Location = new System.Drawing.Point(287, 237);
             this.TxtContrasena.Name = "TxtContrasena";
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.Size = new System.Drawing.Size(195, 20);
             this.TxtContrasena.TabIndex = 6;
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(287, 177);
+            this.TxtEmail.Location = new System.Drawing.Point(287, 165);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(195, 20);
             this.TxtEmail.TabIndex = 7;
@@ -96,6 +86,7 @@
             this.btnIniciarSesion.TabIndex = 5;
             this.btnIniciarSesion.Text = "Continuar";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // FormLoginEmpleado
             // 
@@ -103,7 +94,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 505);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnRegistro);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtContrasena);
@@ -119,7 +109,6 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel btnRegistro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtContrasena;

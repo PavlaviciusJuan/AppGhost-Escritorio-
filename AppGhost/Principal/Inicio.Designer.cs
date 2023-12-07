@@ -40,7 +40,7 @@
             this.btnLoginEmpleado.TabIndex = 0;
             this.btnLoginEmpleado.Text = "Login Empleado";
             this.btnLoginEmpleado.UseVisualStyleBackColor = true;
-            this.btnLoginEmpleado.Click += new System.EventHandler(this.button1_Click);
+            this.btnLoginEmpleado.Click += new System.EventHandler(this.btnLoginEmpleado_Click);
             // 
             // btnLoginCliente
             // 
@@ -50,7 +50,7 @@
             this.btnLoginCliente.TabIndex = 0;
             this.btnLoginCliente.Text = "Login Cliente";
             this.btnLoginCliente.UseVisualStyleBackColor = true;
-            this.btnLoginCliente.Click += new System.EventHandler(this.button2_Click);
+            this.btnLoginCliente.Click += new System.EventHandler(this.btnLoginCliente_Click);
             // 
             // Inicio
             // 
